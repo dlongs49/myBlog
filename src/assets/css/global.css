@@ -1,0 +1,76 @@
+
+html {
+    height: 100%;
+    font-size: 16px
+}
+
+body {
+    height: 100%;
+    font-family: 'Source Han Sans CN' !important;
+}
+#root{
+    height: 100%;
+}
+body,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+    margin: 0;
+    padding: 0
+}
+a {
+    color: #333;
+    text-decoration: none
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+    padding: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+a{
+    cursor: pointer;
+}
+fieldset,
+img {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+i {
+    font-style: normal;
+}
+
+button,
+input,
+select,
+option {
+    outline: none;
+    border: none;
+}
