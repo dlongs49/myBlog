@@ -3,17 +3,17 @@ import './home.less'
 import Header from '@/components/header/header'
 import { imgUrl } from '@/envconfig/env'
 import api from '@/utils/api'
-import { resPost } from '@/utils/http'
+import { resGet } from '@/utils/http'
 import 'element-theme-default'
 
 class Home extends Component {
     state = {
-        bannerList: []
+        item: {}
     };
-    async GetBanner() {
-        const res = await resPost(api.GetBanner)
+    async getVerse() {
+        const res = await resGet(api.getVerse)
         this.setState({
-            bannerList: res.Data
+            item: res.data
         })
     }
     qqClick(){
@@ -32,10 +32,16 @@ class Home extends Component {
             `https://api.weibo.com/oauth2/authorize?client_id=${appid}&response_type=code&redirect_uri=${recturl}`
     
     }
+    // 切换
+    handleVerce(){
+        this.getVerse()
+    }
     // 相当于mounted
     componentDidMount() {
+        this.getVerse()
     }
     render() {
+        const item = this.state.item
         return (
             <div className="content">
                 <div className="third">
@@ -50,7 +56,7 @@ class Home extends Component {
                 </div>
                 <canvas className="snow" id="snow" width="1349" height="400"></canvas>
                 <div className="main-text">
-                    <h1 className="ram"></h1>
+                    <h1 onClick={this.handleVerce.bind(this)} className="ram">{item.verse_title}</h1>
                 </div>
                 <div className="ground">
                     <div className="mound">

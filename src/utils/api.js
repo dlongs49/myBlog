@@ -1,5 +1,3 @@
-import { baseUrl } from '@/envconfig/env'
-// export const api = {
 export default {
-    GetBanner: `${baseUrl}/`, //
+    getVerse: "/api/v2/verse/random/get", // 随机诗句
 };
