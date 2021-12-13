@@ -1,3 +1,4 @@
-export default {
-    getVerse: "/api/v2/verse/random/get", // 随机诗句
+const getVerse = "/api/v2/verse/random/get"
+export {
+    getVerse // 随机诗句
 };
