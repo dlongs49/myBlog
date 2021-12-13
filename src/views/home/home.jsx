@@ -1,18 +1,20 @@
 import React, { Component } from 'react'
 import './home.less'
-import { imgUrl } from '@/envconfig/env'
+import { imgUrl,baseUrl } from '@/envconfig/env'
 import api from '@/utils/api'
 import { resGet } from '@/utils/http'
-
+import jsonp from 'jsonp'
 class Home extends Component {
     state = {
         item: {}
     };
-    async getVerse() {
-        const res = await resGet(api.getVerse)
-        this.setState({
-            item: res.data
+    getVerse() {
+        jsonp(baseUrl+api.getVerse,{},(err,res)=>{
+            this.setState({
+                item: res.data
+            })
         })
+       
     }
     qqClick(){
         let appid = '101936013'
