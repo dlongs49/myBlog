@@ -65,8 +65,8 @@ class Home extends Component {
                     </div>
                 </div>
                 <div className="fot">
-                    <span className="cr"></span>
-                    <a className="links" href="https://beian.miit.gov.cn/" target="_blank"></a>
+                    <span className="cr">Copyright 2019 - {new Date().getFullYear()} dillonl. All Rights Reserved</span>
+                    <a className="links" href="https://beian.miit.gov.cn/" target="_blank">陇ICP备2021000332号-1</a>
                 </div>
             </div>
         )
