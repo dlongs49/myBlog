@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import './home.less'
-import Header from '@/components/header/header'
 import { imgUrl } from '@/envconfig/env'
 import api from '@/utils/api'
 import { resGet } from '@/utils/http'
-import 'element-theme-default'
 
 class Home extends Component {
     state = {
