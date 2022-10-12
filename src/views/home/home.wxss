@@ -1,0 +1,46 @@
+.link-container {
+  position: relative;
+  width: 150px;
+  height: 46px;
+  margin: 0 auto;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.link-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 150px;
+  height: 46px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  transition: .3s linear;
+}
+.link-container:hover::after {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.781);
+}
+.link-container .outbox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.link-container .item {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link-container .item svg {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
