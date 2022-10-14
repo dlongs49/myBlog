@@ -6,7 +6,7 @@ import { resGet } from '@/utils/http'
 import jsonp from 'jsonp'
 class Home extends Component {
     state = {
-        item: { verse_title: "取半舍满，克己修身" }
+        item: { verse_title: "月下飞天镜，云生结海楼" }
     };
     getVerse() {
         jsonp(baseUrl + getVerse, {}, (err, res) => {
@@ -44,7 +44,7 @@ class Home extends Component {
         const item = this.state.item
         return (
             <div className="content">
-                <div className="third">
+                {/* <div className="third">
                     <a onClick={this.qqClick} className="alog qqlogin">
                         <i className="icon i_qq"></i>
                         <span className="spn">QQ</span>
@@ -53,7 +53,7 @@ class Home extends Component {
                         <i className="icon i_wb"></i>
                         <span className="spn">微博</span>
                     </a>
-                </div>
+                </div> */}
                 <canvas className="snow" id="snow" width="1349" height="400"></canvas>
                 <div className="main-text">
                     <h1 onClick={this.handleVerce.bind(this)} className="ram">{item.verse_title}</h1>
