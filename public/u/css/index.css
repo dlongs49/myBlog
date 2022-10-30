@@ -1,11 +1,76 @@
-* {
-    padding: 0;
-    margin: 0
+.footer{
+    position: fixed;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+.links:hover {
+    text-decoration: underline;
+}
+@media screen and (max-width: 745px) {
+    .ramtitle {
+        font-size: 34px;
+        padding: 0 10px;
+    }
+    .footer {
+        width: 100%;
+    }
+
+    .copyright {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        color: #666
+    }
+
+    .links {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        margin-left: 10px;
+        margin-top: 4px;
+        color: #666;
+        text-decoration: none;
+    }
+    .mound {
+        margin-top: -15px;
+        font-weight: 800;
+        font-size: 72px;
+        text-align: center;
+        color: #dd4040;
+        pointer-events: none
+    }
 }
 
-html,
-body {
-    height: 100%
+@media screen and (min-width: 745px) {
+    .ramtitle {
+        font-size: 45px;
+        line-height: 48px;
+        margin: 0;
+        padding: 0
+    }
+
+    .copyright {
+        font-size: 14px;
+        color: #666
+    }
+
+    .links {
+        font-size: 14px;
+        margin-left: 10px;
+        color: #666;
+        text-decoration: none;
+    }
+    .mound {
+        margin-top: -80px;
+        font-weight: 800;
+        font-size: 180px;
+        text-align: center;
+        color: #dd4040;
+        pointer-events: none
+    }
+
 }
 
 .content {
@@ -15,11 +80,11 @@ body {
     background-color: #d2e1ec;
     background-image: -webkit-linear-gradient(top, #bbcfe1 0, #e8f2f6 80%);
     background-image: linear-gradient(to bottom, #bbcfe1 0, #e8f2f6 80%);
-    overflow: hidden
+    overflow: hidden;
 }
 
-h1 {
-    color: #5d7399
+.ramtitle {
+    color: #5d7399;
 }
 
 .snow {
@@ -27,21 +92,15 @@ h1 {
     top: 0;
     left: 0;
     pointer-events: none;
-    z-index: 20
+    z-index: 20;
 }
 
 .main-text {
     margin-top: 8em;
     text-align: center;
-    font-size: 5vh
+    font-size: 5vh;
 }
 
-.main-text h1 {
-    font-size: 45px;
-    line-height: 48px;
-    margin: 0;
-    padding: 0
-}
 
 .main-text-a {
     height: 32px;
@@ -109,14 +168,7 @@ h1 {
     box-shadow: 325px -275px 15px #b4bed1, 620px -580px 15px #adb9cd, 925px -875px 15px #a1aec6, 1220px -1180px 15px #b7c1d3, 1545px -1455px 15px #7e90b0, 1795px -1805px 15px #b0bccf, 2080px -2120px 15px #b7c1d3, 2395px -2405px 15px #8e9eba, 2730px -2670px 15px #b7c1d3, 2995px -3005px 15px #9dabc4, 3285px -3315px 15px #a1aec6, 3620px -3580px 15px #8193b2, 3880px -3920px 15px #aab6cb, 4225px -4175px 15px #9dabc4, 4510px -4490px 15px #8e9eba, 4785px -4815px 15px #a7b4c9
 }
 
-.mound {
-    margin-top: -80px;
-    font-weight: 800;
-    font-size: 180px;
-    text-align: center;
-    color: #dd4040;
-    pointer-events: none
-}
+
 
 .mound:before {
     content: "";
@@ -196,26 +248,36 @@ h1 {
     border-radius: 4px 4px 20px 20px
 }
 
-.fot {
-    position: fixed;
-    bottom: 3px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 99;
+
+/*qq 微博*/
+
+.third {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 10px;
+    top: 20px;
 }
 
-.cr {
-    font-size: 14px;
-    color: #666
-}
-
-.links {
-    font-size: 14px;
-    margin-left: 10px;
-    color: #666;
+.third .alog {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30px;
     text-decoration: none;
 }
 
-.links:hover {
+.third .alog i {
+    font-size: 28px;
+}
+
+.third .alog .spn {
+    margin-top: 3px;
+    color: #666;
+    font-size: 13px;
+}
+
+.third .alog:hover .spn {
     text-decoration: underline;
 }
