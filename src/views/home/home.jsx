@@ -38,7 +38,7 @@ class Home extends Component {
     }
     // 相当于mounted
     componentDidMount() {
-        // this.getVerse()
+        this.getVerse()
     }
     render() {
         const item = this.state.item
