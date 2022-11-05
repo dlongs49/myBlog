@@ -9,7 +9,7 @@ class Home extends Component {
         item: { verse_title: "月下飞天镜，云生结海楼" }
     };
     getVerse() {
-        jsonp(baseUrl + getVerse, {}, (err, res) => {
+        jsonp('http://expro.dillonl.com' + getVerse, {}, (err, res) => {
             this.setState({
                 item: res.data
             })
@@ -38,7 +38,7 @@ class Home extends Component {
     }
     // 相当于mounted
     componentDidMount() {
-        // this.getVerse()
+        this.getVerse()
     }
     render() {
         const item = this.state.item
