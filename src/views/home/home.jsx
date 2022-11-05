@@ -2,19 +2,18 @@ import React, { Component } from 'react'
 import './home.less'
 import { imgUrl, baseUrl } from '@/envconfig/env'
 import { getVerse } from '@/utils/api'
-import { resGet } from '@/utils/http'
-import jsonp from 'jsonp'
 class Home extends Component {
     state = {
         item: { verse_title: "月下飞天镜，云生结海楼" }
     };
     getVerse() {
-        jsonp('http://expro.dillonl.com' + getVerse, {}, (err, res) => {
+        fetch(baseUrl + getVerse,{
+            method:'GET'
+        }).then(response=> response.json()).then(res=>{
             this.setState({
                 item: res.data
             })
         })
-
     }
     qqClick() {
         const appid = '101936013'
