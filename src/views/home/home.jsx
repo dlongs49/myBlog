@@ -18,7 +18,7 @@ class Home extends Component {
     }
     // 切换
     handleVerce() {
-        this.getVerse()
+        // this.getVerse()
     }
     // 相当于mounted
     componentDidMount() {
