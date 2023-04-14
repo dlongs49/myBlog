@@ -3,59 +3,12 @@ import './home.less'
 import { imgUrl, baseUrl } from '@/envconfig/env'
 import { getVerse } from '@/utils/api'
 class Home extends Component {
-    state = {
-        item: { verse_title: "月下飞天镜，云生结海楼" }
-    };
-    getVerse() {
-        fetch(baseUrl + getVerse,{
-            method:'GET'
-        }).then(response=> response.json()).then(res=>{
-            this.setState({
-                item: res.data
-            })
-        })
-    }
-    qqClick() {
-        const appid = '101936013'
-        const recturl = encodeURIComponent('http://expro.dillonl.com/api/v2/qqlogin')
-        const scope = '0'
-        const display = null; // 默认pc 'mobile' 移动端
-        window.location.href =
-            `https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=${appid}&redirect_uri=${recturl}&scope=${scope}&display=${display}`
-
-    }
-    wbClick() {
-        const appid = '1883180365'
-        const recturl = encodeURIComponent('http://expro.dillonl.com/api/v2/wblogin')
-        window.location.href =
-            `https://api.weibo.com/oauth2/authorize?client_id=${appid}&response_type=code&redirect_uri=${recturl}`
-
-    }
-    // 切换
-    handleVerce() {
-        this.getVerse()
-    }
-    // 相当于mounted
-    componentDidMount() {
-        this.getVerse()
-    }
     render() {
-        const item = this.state.item
         return (
             <div className="content">
-                 {/* <div className="third">
-                    <a onClick={this.qqClick} className="alog qqlogin">
-                        <i className="icon i_qq"></i>
-                        <span className="spn">QQ</span>
-                    </a>
-                    <a onClick={this.wbClick} className="alog wblogin">
-                        <i className="icon i_wb"></i>
-                        <span className="spn">微博</span>
-                    </a>
-                </div>  */}
                 <canvas className="snow" id="snow" width="1349" height="400"></canvas>
                 <div className="main-text">
-                    <h1 onClick={this.handleVerce.bind(this)} className="ramtitle">{item.verse_title}</h1>
+                    <h1 onClick={this.handleVerce.bind(this)} className="ramtitle">取半舍满，克己修身</h1>
                     <div className="link-container">
                         <div className="outbox">
                             <a href="https://github.com/dlongs49" rel="noopener noreferrer" title="GitHub" target="_blank" className="item">
