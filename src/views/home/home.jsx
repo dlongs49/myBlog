@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './home.less'
-import { imgUrl, baseUrl } from '@/envconfig/env'
+import { baseUrl } from '@/envconfig/env'
 import { getVerse } from '@/utils/api'
 class Home extends Component {
     render() {
@@ -8,7 +8,7 @@ class Home extends Component {
             <div className="content">
                 <canvas className="snow" id="snow" width="1349" height="400"></canvas>
                 <div className="main-text">
-                    <h1 onClick={this.handleVerce.bind(this)} className="ramtitle">取半舍满，克己修身</h1>
+                    <h1 className="ramtitle">取半舍满，克己修身</h1>
                     <div className="link-container">
                         <div className="outbox">
                             <a href="https://github.com/dlongs49" rel="noopener noreferrer" title="GitHub" target="_blank" className="item">
