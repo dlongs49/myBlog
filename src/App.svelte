@@ -27,7 +27,7 @@
           >
         </a>
         <a
-          href="https://gitee.com/dlongs49"
+          href="https://gitee.com/dloong49"
           rel="noopener noreferrer"
           title="码云"
           target="_blank"
@@ -65,7 +65,7 @@
           >
         </a>
         <a
-          href="https://twitter.com/dlongs49"
+          href="https://x.com/dloong49"
           rel="noopener noreferrer"
           title="X"
           target="_blank"
